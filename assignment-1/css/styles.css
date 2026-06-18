@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/*==========================================================================*/
+/* #region About */
+/*--------------------------------------------------------------------------*/
+/* 
+    I have made an extremely simple CSS style here that certainly won't
+    be as pretty as other students work but it illustrates the basics layout 
+    from the toy presented.
+*/
+/*--------------------------------------------------------------------------*/
+/* #endregion About */
+/*==========================================================================*/
+
+/*==========================================================================*/
+/* #region General Reset */
+/*--------------------------------------------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header,
+footer {
+    text-align: center;
+}
+/*--------------------------------------------------------------------------*/
+/* #endregion General Reset */
+/*==========================================================================*/
+
+/*==========================================================================*/
+/* #region Main Layout */
+/*--------------------------------------------------------------------------*/
+/* Main Container Holds Left And Right Side */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Side */
+.left-side {
+    display: flex;
+    flex: 3;
+}
+
+/* Individual Column Styling */
+.left-side > div {
+    flex: 1;
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Column Colours */
+.column-1 { background: #d96ad9; }
+.column-2 { background: #66d9ff; }
+.column-3 { background: #b8e35f; }
+.column-4 { background: #ffb84d; }
+.column-5 { background: #ff66cc; }
+
+/* Left Side Text (Story Words) */
+.left-side p {
+    margin: 8px 0;
+    font-size: 1.4rem;
+}
+
+/* Right Side (Contains control buttons and output) */
+.right-side {
+    flex: 1;
+    background: #ffe600;
+    border: 2px solid #000;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Row of Selection Buttons */
+.selections {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Circular Styling For Selection Buttons */
+.selections button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+/* Selection Button Colours */
+.selection1-btn { background: purple; }
+.selection2-btn { background: deepskyblue; }
+.selection3-btn { background: limegreen; }
+.selection4-btn { background: orange; }
+.selection5-btn { background: hotpink; }
+
+/* Output Area (Where Story Text Will Display) */
+.output {
+    min-height: 150px;
+    border: 2px dashed #555;
+    margin: 20px 0;
+    padding: 15px;
+    text-align: center;
+    background: white;
+}
+
+/* Container for Control Buttons */
+.controls {
+    display: flex;
+    flex-direction: column;
+    margin-top:30px;
+    gap: 8px;
+}
+
+/* Shared Styling For Control Buttons */
+.controls button {
+    padding: 10px;
+    cursor: pointer; 
+}
+/*--------------------------------------------------------------------------*/
+/* #endregion Main Layout */
+/*==========================================================================*/
