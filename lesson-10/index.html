@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>JavaScript Object Notation (JSON) | COMP1073 Client-Side JavaScript</title>
+	<title>Object Prototypes | COMP1073 Client-Side JavaScript</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="css/normalize.css" rel="stylesheet" />
 	<link href="css/styles.css" rel="stylesheet" />
-	<script src="js/json.js" defer></script>
+	<script src="js/index.js" defer></script>
 </head>
 
 <body>
-	<!-- STEP 1: Build out a HEADER and a SECTION element -->
-
-	<!-- Proceed to js/json.js for the remainder of the lesson -->
+	<h1>Object Prototypes</h1>
+	<p>JavaScript objects inherit features from one another using Prototypes. Each and every <code>object</code> features a <code>prototype</code> object that functions as a template from which it inherits methods and properties. Such objects may also contain their own <code>prototype</code> objects from which they <em>also</em> inherit various methods and properties…and so on. This chain of inheritance is called the <dfn>prototype chain</dfn>.</p>
+	<p><img src="images/js-prototype-inheritance.png" width="100%" alt="JavaScript Prototype Inheritance" /></p>
+	<p id="output"></p>
 </body>
 </html>
