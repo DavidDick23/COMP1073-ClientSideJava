@@ -26,7 +26,7 @@
         "calories": 600,
         "type": "ice-cream",
         "ingredients": ["Chocolate Syrup", "Chocolate Chunks", "Chocolate Cream", "Chocolate Base"],
-        "image": "https://daviddick23.github.io/COMP1073-ClientSideJava/lab-3/images/ice-cream-xtra1.svg"
+        "image": "https://raw.githubusercontent.com/DavidDick23/COMP1073-ClientSideJava/9a63676aacee134f25d81a4576758d15b5a42ab6/lab-3/images/ice-cream-xtra1.svg"
     }, {
         "name": "Mint Marble",
         "calories": 320,
