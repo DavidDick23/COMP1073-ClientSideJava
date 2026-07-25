@@ -20,13 +20,13 @@
         "calories": 220,
         "type": "ice-cream",
         "ingredients": ["Strawberry Syrup", "Strawberry Chunks", "Sprinkle", "Chocolate Base"],
-        "image": "https://daviddick23.github.io/COMP1073-ClientSideJava/lab-3/strawberry-sprinkle.svg"
+        "image": "https://daviddick23.github.io/COMP1073-ClientSideJava/lab-3/images/strawberry-sprinkle.svg"
     }, {
         "name": "Chocolate Chunker",
         "calories": 600,
         "type": "ice-cream",
         "ingredients": ["Chocolate Syrup", "Chocolate Chunks", "Chocolate Cream", "Chocolate Base"],
-        "image": "https://daviddick23.github.io/COMP1073-ClientSideJava/lab-3/ice-cream-xtra1.svg"
+        "image": "https://daviddick23.github.io/COMP1073-ClientSideJava/lab-3/images/ice-cream-xtra1.svg"
     }, {
         "name": "Mint Marble",
         "calories": 320,
