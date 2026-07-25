@@ -1,0 +1,25 @@
+{
+    "companyName": "I-Scream Company Inc.",
+    "headOffice": "North Pole",
+    "established": 2026,
+    "active": true,
+    "topFlavours": [{
+        "name": "Chocolate Mint",
+        "calories": 200,
+        "type": "ice-cream",
+        "ingredients": ["Chocolate Syrup", "Peppermint Sprinkle", "Vanilla Base"],
+        "image": "https://priyansht.github.io/26S-JavaScript-01-Week11/images/chocolate-mint.svg"
+    }, {
+        "name": "Peach Mango",
+        "calories": 240,
+        "type": "milkshake-type ice-cream",
+        "ingredients": ["Peach Syrup", "Mango Chunks", "Vanilla Base"],
+        "image": "https://priyansht.github.io/26S-JavaScript-01-Week11/images/peach-mango.svg"
+    }, {
+        "name": "Strawberry Sprinkle",
+        "calories": 220,
+        "type": "ice-cream",
+        "ingredients": ["Strawberry Syrup", "Strawberry Chunks", "Sprinkle", "Chocolate Base"],
+        "image": "https://priyansht.github.io/26S-JavaScript-01-Week11/images/strawberry-sprinkle.svg"
+    }]
+}
