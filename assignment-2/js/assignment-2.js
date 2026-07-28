@@ -12,17 +12,19 @@
 // #region Global Vars
 //-------------------------------------------------------------------------------------------------------
 const studentOutput = document.querySelector("#student");
-//const pizzaOutput;
+const pizzaOutput = document.querySelector("#pizza-output");
+const orderForm = document.querySelector("#pizza-order-form");
 //-------------------------------------------------------------------------------------------------------
 // #endregion Global Vars
 //=======================================================================================================
 
 //=======================================================================================================
-// #region Output Functionality
+// #region Student Name/ID Output
 //-------------------------------------------------------------------------------------------------------
+// Displays my name and student id in the p element with the id of "student"
 studentOutput.textContent = "Pizza By David Dick | 100099683";
 //-------------------------------------------------------------------------------------------------------
-// #endregion Output Functionality
+// #endregion Student Name/ID Output
 //=======================================================================================================
 
 //=======================================================================================================
@@ -59,7 +61,49 @@ class Pizza
 //=======================================================================================================
 // #region Pizza Validation
 //-------------------------------------------------------------------------------------------------------
+// Add an event listener to the submit button with internal logic
+// Reference: https://www.youtube.com/watch?v=zMy8o4kVs-Y
+orderForm.addEventListener("submit", function(event)
+{
+    // Prevent the page from submitting the form to allow validation first
+    // Reference: https://www.w3schools.com/Jsref/event_preventdefault.asp
+    event.preventDefault();
 
+    // Local variables
+    const customerName = document.getElementById("customer-name").value;
+    const size = document.getElementById("size").value;
+    const sauce = document.getElementById("sauce").value;
+    const toppings = []; // empty array to store values later
+
+    // Check that size and sauce (not empty strings) are selected and return if not
+    if (size === "")
+    {
+        alert("A Size Must Be Selected!");
+        return;
+    }
+    if (sauce === "")
+    {
+        alert("A Sauce Must Be Selected!");
+        return;
+    }
+
+    // Add each topping item to the empty array 'toppings'
+    // Reference: https://stackoverflow.com/questions/62504485/how-do-i-pass-the-values-of-checked-boxes-to-an-array-using-javascript-not-jque
+    document.querySelectorAll('input[name="toppings"]:checked').forEach(function(topping)
+    {
+        toppings.push(topping.value);
+    });
+
+    // Add a default of 'None' if no toppings were selectedd
+    if (toppings.length == 0)
+        toppings.push("None");
+
+    // Create a new pizza object from the values
+    pizzaObj = new Pizza(customerName, size, sauce, toppings);
+
+    // Use the objects description function to display the pizza order
+    pizzaOutput.textContent = pizzaObj.getDescription();
+});
 //-------------------------------------------------------------------------------------------------------
 // #endregion Pizza Validation
 //=======================================================================================================
