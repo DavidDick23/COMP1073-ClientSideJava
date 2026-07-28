@@ -2,7 +2,10 @@
 // #region About
 //-------------------------------------------------------------------------------------------------------
 /* 
-    TODO: Write this section
+    This JS is the driving force of this assignment. It is well documented and easy to understand.
+    There were a few new concepts that I had learned especially with adding to an emtpy array in JS.
+    I have referenced all of the code that I needed to research and there are a few more links in
+    terms of some youtube videos but I feel this covers it all in terms of the validation.
 */
 //-------------------------------------------------------------------------------------------------------
 // #endregion About
