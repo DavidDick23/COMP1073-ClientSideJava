@@ -21,7 +21,7 @@
     <body>
         <!-- Header Content -->
         <header>
-            <h1>Pizaa Order Form</h1>
+            <h1>Pizza Order Form</h1>
 
             <!-- TODO: Add Student Name And ID Dynamically (JS) -->
             <p id="student"></p>
@@ -29,7 +29,57 @@
 
         <!-- Main Content -->
         <main>
-            <!-- TODO: Create Order Form -->
+            <!-- Pizza Order Form -->
+            <form id="pizza-order-form">
+
+                <!-- Size Selection -->
+                <label for="size">Pizza Size:</label>
+                <select id="size" name="size">
+                    <option value="">-- Select Size --</option>
+                    <option value="large">Large</option>
+                    <option value="medium">Medium</option>
+                    <option value="small">Small</option>
+                </select>
+
+                <!-- Line Break -->
+                <br>
+
+                <!-- Sauce Selection -->
+                <label for="sauce">Sauce:</label>
+                <select id="sauce" name="sauce">
+                    <option value="">-- Select Sauce --</option>
+                    <option value="tomato">Tomato</option>
+                    <option value="bbq">BBQ</option>
+                    <option value="alfredo">Alfredo</option>
+                    <option value="ranch">Ranch</option>
+                </select>
+
+                <!-- Line Break -->
+                <br>
+
+                <!-- Toppings Selection -->
+                <p>Toppings:</p>
+
+                <!-- Cheese -->
+                <input type="checkbox" id="cheese" name="toppings" value="Cheese">
+                <label for="cheese">Cheese</label>
+
+                <!-- Pepperoni -->
+                <input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
+                <label for="pepperoni">Pepperoni</label>
+
+                <!-- Mushrooms -->
+                <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
+                <label for="mushrooms">Mushrooms</label>
+
+                <!-- Green Peppers -->
+                <input type="checkbox" id="green-peppers" name="toppings" value="GreenPeppers">
+                <label for="green-peppers">Green Peppers</label>
+
+                <!-- Onions -->
+                <input type="checkbox" id="onions" name="toppings" value="Onions">
+                <label for="onions">Onions</label> 
+            </form>
         </main>
 
         <!-- Footer Content -->
