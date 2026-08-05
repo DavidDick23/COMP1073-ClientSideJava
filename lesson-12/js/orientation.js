@@ -50,7 +50,7 @@ else
         // STEP 3f: Capture the gamma value (tilt left/right) and set the textContent for the <output> element
         gammaValue.textContent = Math.round(event.gamma) + "°";
         // STEP 3g: Use the same value to update the position of the slider
-        gammaSliderSlider.value = Math.round(event.gamma);
+        gammaSlider.value = Math.round(event.gamma);
     });
     
 }
