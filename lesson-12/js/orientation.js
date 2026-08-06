@@ -52,8 +52,6 @@ else
         // STEP 3g: Use the same value to update the position of the slider
         gammaSlider.value = Math.round(event.gamma);
     });
-    
 }
-
 
 /* Learn more at https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent */
