@@ -3,11 +3,11 @@
     <!-- Core Behaviour -->
     <head>
         <!-- Tab Title -->
-        <title>David Dick - Assignment-3 | COMP1073 Client-Side JavaScript</title>
+        <title>Assignment-3 | COMP1073 Client-Side JavaScript</title>
 
         <!-- Meta Data -->
         <meta charset="utf-8" />
-        <meta name="viewport" content="device-width", initial-scale="1.0" />
+        <meta name="viewport" content="width=device-width", initial-scale="1.0" />
 
         <!-- CSS Links -->
         <link href="css/normalize.css" rel="stylesheet"/>
@@ -21,18 +21,43 @@
     <body>
         <!-- Header Content -->
         <header>
-            <h1>Untitled</h1>
+            <h1>NASA Picture Of The Day</h1>
+            <p>Explore NASA's Astronomy Picture Of The Day</p>
         </header>
 
         <!-- Main Content -->
         <main>
-            <!-- TODO: Add Main Content -->
+            <!-- Container For Main Content -->
+            <div id="container">
+                <h2 id="title">Image Title</h2>
+                <p id="date"></p>
+                <img id="astronomy-image" alt="NASA Astronomy Picture of the Day">
+                <p id="description"></p>
+                <p id="credit"></p>
+            </div>
+
+            <!-- Container For Date Selector Elements -->
+            <div id="selector">
+                <!-- Arrows Found At: https://www.w3schools.com/charsets/ref_utf_arrows.asp -->
+                <!-- Backward Arrow -->
+                <button id="previous-day" type="button">&larr;</button>
+
+                <!-- Date Selector Calendar -->
+                <label for="date-picker">Select a date:</label>
+                <input type="date" id="date-picker">
+
+                <!-- Forward Arrow -->
+                <button id="next-day" type="button">&rarr;</button>
+            </div>
         </main>
 
         <!-- Footer Content -->
         <footer>
-            <!-- TODO: Add Student Name And ID Dynamically (JS) -->
-            <p id="student-info">&copy;2026 | David Dick - Assignment-3</p>
+            <!-- NASA Credit/Link -->
+            <a href="https://api.nasa.gov/">Data Provided By NASA</a>
+
+            <!-- Empty p element to dynamically add student name/id -->
+            <p id="student-info"></p>
         </footer>
     </body>
 </html>
