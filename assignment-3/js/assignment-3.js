@@ -28,11 +28,38 @@ const credit = document.querySelector("#credit");
 
 //#region Dynamic Page Landing
 //--------------------------------------------------------------------------------------
-let targetDate = "2026-08-11"; // today's date (to revise)
-getAPOD(targetDate); // call the function (test)
+// Create a new date object (today's date) and format it to YYYY-MM-DD
+let today = new Date();
+let targetDate = formatDate(today);
+
+// Debug Date Format
+//console.log(targetDate);
+
+// Get today's picture when the page is loaded
+getAPOD(targetDate);
 
 // Displays my name and student id in the p element with the id of "student-info"
 studentInfo.textContent = "©2026 | David Dick - 100099683"; // alt-0169 for copywrite symbol found at https://www.alt-codes.net/copyright_alt_code.php
+//--------------------------------------------------------------------------------------
+//#endregion
+
+//#region Date Formatter Function
+//--------------------------------------------------------------------------------------
+// This took a while to figure out, a few resources to locate solution but best answer came from here: https://stackoverflow.com/questions/23593052/format-javascript-date-as-yyyy-mm-dd
+function formatDate(date) 
+{
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+
+    if (month < 10) 
+        month = '0' + month;
+
+    if (day < 10) 
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+}
 //--------------------------------------------------------------------------------------
 //#endregion
 
