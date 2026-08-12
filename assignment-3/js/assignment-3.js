@@ -1,8 +1,24 @@
-//#region Empty
+//======================================================================================
+//#region About
 //--------------------------------------------------------------------------------------
+/*
+    This is a simple demonstration using NASA's Open API to display the 'Astronomy
+    Picture Of The Day'. The documentation is located at https://api.nasa.gov/ in 
+    the 'Browse APIs section.
 
+    The functionality is a bit buggy with the async function but I noticed it took
+    quite a while to perform the fetch and that's why I decided to use await while
+    fetching.
+
+    When using the calendar please wait a few seconds before proceeding to change dates.
+    The alert may prompt from the catch block but during testing you may have to reselect
+    the date and it will load.
+
+    Example query: https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
+*/
 //--------------------------------------------------------------------------------------
-//#endregion
+//#endregion About
+//======================================================================================
 
 //#region Global Variables
 //--------------------------------------------------------------------------------------
@@ -30,13 +46,13 @@ const credit = document.querySelector("#credit");
 //--------------------------------------------------------------------------------------
 // Create a new date object (today's date) and format it to YYYY-MM-DD
 let today = new Date();
-let targetDate = formatDate(today);
+let todayFormatted = formatDate(today);
 
 // Debug Date Format
 //console.log(targetDate);
 
 // Get today's picture when the page is loaded
-getAPOD(targetDate);
+getAPOD(todayFormatted);
 
 // Displays my name and student id in the p element with the id of "student-info"
 studentInfo.textContent = "©2026 | David Dick - 100099683"; // alt-0169 for copywrite symbol found at https://www.alt-codes.net/copyright_alt_code.php
@@ -45,26 +61,25 @@ studentInfo.textContent = "©2026 | David Dick - 100099683"; // alt-0169 for cop
 
 //#region Events
 //--------------------------------------------------------------------------------------
-    // This logic will execute when the date from the calendar changes
-    datePicker.addEventListener("change", function()
+// This logic will execute when the date from the calendar changes
+datePicker.addEventListener("change", function()
+{
+    // Get the selected value from the calendar
+    const selectedDate = datePicker.value;
+
+    // If the date is greater than todays date
+    if (selectedDate > todayFormatted)
     {
-        // Get the selected value from the calendar
-        const selectedDate = datePicker.value;
+        // Set an alert and do not continue
+        alert("Cannot select a future date.");
+        return;
+    }
 
-        // If the date is greater than todays date
-        if (selectedDate > targetDate)
-        {
-            // Set an alert and do not continue
-            alert("Cannot select a future date.");
-            return;
-        }
-
-        // Otherwise, attempt to fetch the data from the selected date
-        getAPOD(selectedDate);
-    });
+    // Otherwise, attempt to fetch the data from the selected date
+    getAPOD(selectedDate);
+});
 //--------------------------------------------------------------------------------------
 //#endregion
-
 
 //#region Date Formatter Function
 //--------------------------------------------------------------------------------------
@@ -103,6 +118,7 @@ async function getAPOD(date)
         // Waits for the URL as it may take time to fetch
         const response = await fetch(url); 
 
+        // If there is an issue with the response throw a new error and exit block (go to catch)
         if (!response.ok)
         {
             throw new Error("Unable to get NASA APOD data!");
