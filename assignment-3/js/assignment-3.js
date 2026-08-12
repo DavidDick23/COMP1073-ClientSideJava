@@ -48,16 +48,20 @@ studentInfo.textContent = "©2026 | David Dick - 100099683"; // alt-0169 for cop
 // This took a while to figure out, a few resources to locate solution but best answer came from here: https://stackoverflow.com/questions/23593052/format-javascript-date-as-yyyy-mm-dd
 function formatDate(date) 
 {
+    // Local variables for formatting
     let year = date.getFullYear();
     let month = date.getMonth() + 1;
     let day = date.getDate();
 
+    // Add a 0 if the month is not double digits
     if (month < 10) 
         month = '0' + month;
 
+    // Add a 0 if the day is not double digits
     if (day < 10) 
         day = '0' + day;
 
+    // Return in the string in YYYY-MM-DD format
     return [year, month, day].join('-');
 }
 //--------------------------------------------------------------------------------------
