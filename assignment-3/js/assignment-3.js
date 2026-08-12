@@ -43,6 +43,29 @@ studentInfo.textContent = "©2026 | David Dick - 100099683"; // alt-0169 for cop
 //--------------------------------------------------------------------------------------
 //#endregion
 
+//#region Events
+//--------------------------------------------------------------------------------------
+    // This logic will execute when the date from the calendar changes
+    datePicker.addEventListener("change", function()
+    {
+        // Get the selected value from the calendar
+        const selectedDate = datePicker.value;
+
+        // If the date is greater than todays date
+        if (selectedDate > targetDate)
+        {
+            // Set an alert and do not continue
+            alert("Cannot select a future date.");
+            return;
+        }
+
+        // Otherwise, attempt to fetch the data from the selected date
+        getAPOD(selectedDate);
+    });
+//--------------------------------------------------------------------------------------
+//#endregion
+
+
 //#region Date Formatter Function
 //--------------------------------------------------------------------------------------
 // This took a while to figure out, a few resources to locate solution but best answer came from here: https://stackoverflow.com/questions/23593052/format-javascript-date-as-yyyy-mm-dd
